@@ -9,7 +9,7 @@ import os
 
 # ---------------------------------------
 # підключення
-DB_URL = "postgresql://tanykozyr2025:foS_*529gpx@postgresql-tanykozyr2025.alwaysdata.net:5432/tanykozyr2025_postsql"
+DB_URL = "..."
 DB_SCHEMA = "fin_proj"
 LOG_TABLE = "t_etl_logs"
 
