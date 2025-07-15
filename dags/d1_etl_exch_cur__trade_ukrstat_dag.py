@@ -14,7 +14,7 @@ from io import BytesIO
 from pandas.tseries.offsets import MonthBegin
 
 # 1. Підключення до БД
-db_url = "postgresql://tanykozyr2025:foS_*529gpx@postgresql-tanykozyr2025.alwaysdata.net:5432/tanykozyr2025_postsql"
+db_url = "..."
 engine = create_engine(db_url)
 #------------------------------------------------------------------------------------------------
 # 2. Декоратор логування
