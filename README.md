@@ -43,36 +43,32 @@ _**“Аналіз макроекономічних та зовнішньото�
 
 **Структура**
 
-  astro-finalproject/
-├── dags/
-│   ├── d1_etl_exch_cur__trade_ukrstat_dag.py            # DAG: курс валют + торгівля
-│   ├── d2_inflation_nburate_dag.py                      # DAG: інфляція + ставка НБУ
-│   ├── d3_ukrstat_trade_dict_dag.py                     # DAG: довідник товарних груп
-│   ├── d4_dbt_ukrstat_dict_log_dag.py                   # DAG: запуск dbt, логування
-│   └── final_project/
-│       ├── models/
-│       │   ├── ukrstat_trade_data/                      # staging моделі торгівлі, курсів
-│       │   │   ├── stg_ukrstat_trade_data_country.sql
-│       │   │   ├── stg_ukrstat_trade_data_product.sql
-│       │   │   ├── stg_exch_rates_median_month.sql
-│       │   │   └── schema.yml
-│       │   ├── ukrstat_trade_dict/                      # staging моделі довідників
-│       │   │   ├── stg_ukrstat_trade_dict_group.sql
-│       │   │   ├── stg_ukrstat_trade_dict_subgr.sql
-│       │   │   └── schema.yml
-│       │   ├── marts/                                   # агреговані моделі (Gold)
-│       │   │   ├── dim_ukrstat_trade_product_location.sql
-│       │   │   ├── dim_ukrstat_trade_summary.sql
-│       │   │   └── schema.yml
-│       │   └── schema_country_dict.yml                  # додатковий словник
-│       ├── seeds/                                       # seed-файли для карт та довідників
-│       │   ├── country_dict.csv
-│       │   └── country_dict_id.csv
-│       └── dbt_project.yml                              # конфігурація dbt
-
-
-
-<pre>astro-finalproject/├── dags/│   ├── d1_etl_exch_cur__trade_ukrstat_dag.py            # DAG: курс валют + торгівля│   ├── d2_inflation_nburate_dag.py                      # DAG: інфляція + ставка НБУ│   ├── d3_ukrstat_trade_dict_dag.py                     # DAG: довідник товарних груп│   ├── d4_dbt_ukrstat_dict_log_dag.py                   # DAG: запуск dbt, логування│   └── final_project/│       ├── models/│       │   ├── ukrstat_trade_data/│       │   │   ├── stg_ukrstat_trade_data_country.sql│       │   │   ├── stg_ukrstat_trade_data_product.sql│       │   │   ├── stg_exch_rates_median_month.sql│       │   │   └── schema.yml│       │   ├── ukrstat_trade_dict/│       │   │   ├── stg_ukrstat_trade_dict_group.sql│       │   │   ├── stg_ukrstat_trade_dict_subgr.sql│       │   │   └── schema.yml│       │   ├── marts/│       │   │   ├── dim_ukrstat_trade_product_location.sql│       │   │   ├── dim_ukrstat_trade_summary.sql│       │   │   └── schema.yml│       │   └── schema_country_dict.yml│       ├── seeds/│       │   ├── country_dict.csv│       │   └── country_dict_id.csv│       └── dbt_project.yml</pre>
+```  astro-finalproject/
+```├── dags/
+```│   ├── d1_etl_exch_cur__trade_ukrstat_dag.py            # DAG: курс валют + торгівля
+```│   ├── d2_inflation_nburate_dag.py                      # DAG: інфляція + ставка НБУ
+```│   ├── d3_ukrstat_trade_dict_dag.py                     # DAG: довідник товарних груп
+```│   ├── d4_dbt_ukrstat_dict_log_dag.py                   # DAG: запуск dbt, логування
+```│   └── final_project/
+```│       ├── models/
+```│       │   ├── ukrstat_trade_data/                      # staging моделі торгівлі, курсів
+```│       │   │   ├── stg_ukrstat_trade_data_country.sql
+```│       │   │   ├── stg_ukrstat_trade_data_product.sql
+```│       │   │   ├── stg_exch_rates_median_month.sql
+```│       │   │   └── schema.yml
+```│       │   ├── ukrstat_trade_dict/                      # staging моделі довідників
+```│       │   │   ├── stg_ukrstat_trade_dict_group.sql
+```│       │   │   ├── stg_ukrstat_trade_dict_subgr.sql
+```│       │   │   └── schema.yml
+```│       │   ├── marts/                                   # агреговані моделі (Gold)
+```│       │   │   ├── dim_ukrstat_trade_product_location.sql
+```│       │   │   ├── dim_ukrstat_trade_summary.sql
+```│       │   │   └── schema.yml
+```│       │   └── schema_country_dict.yml                  # додатковий словник
+```│       ├── seeds/                                       # seed-файли для карт та довідників
+```│       │   ├── country_dict.csv
+```│       │   └── country_dict_id.csv
+```│       └── dbt_project.yml                              # конфігурація dbt
 
 
 **Логування ETL-процесів**
