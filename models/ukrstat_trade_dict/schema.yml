@@ -1,0 +1,32 @@
+
+version: 2
+
+models:
+  - name: stg_ukrstat_trade_dict_group
+    description: "Словник груп товарів за роками для експорту_імпорту в Україні"
+    columns:
+      - name: id_group
+        description: "Унікальний ID для групи (створений через row_number)"
+        tests: [not_null, unique]
+      - name: group_name
+        tests: [not_null]
+      - name: year
+        tests: [not_null]
+
+  - name: stg_ukrstat_trade_dict_subgr
+    description: "Підгрупи товарів за роками для експорту_імпорту із зв’язком до group"
+    columns:
+      - name: subgroup
+        tests: [not_null]
+      - name: subgroup_eng
+        tests: [not_null]
+      - name: product_id
+        description: "Ключ для товару з назви subgroup"
+        tests: [not_null]
+      - name: id_group
+        description: "Зовнішній ключ до стовпця id_group у словнику груп"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_ukrstat_trade_dict_group')
+              field: id_group
