@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 from functools import wraps
 
 # 1.Підключення до PostgreSQL
-db_url = "postgresql+psycopg2://tanykozyr2025:foS_*529gpx@postgresql-tanykozyr2025.alwaysdata.net:5432/tanykozyr2025_postsql"
+db_url = "..."
 engine = create_engine(db_url)
 #--------------------------------------------------------------------------------------------------------------
 # 2.Декоратор логування
