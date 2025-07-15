@@ -1,0 +1,97 @@
+
+version: 2
+
+sources:
+  - name: fin_proj
+    schema: fin_proj
+    tables:
+      - name: t4_raw_ukrstat_trade_data
+
+models:
+#-------------------------------------------------------------
+  - name: stg_ukrstat_trade_data_country
+    description: "Кумулятивні та помісячні дані експорту_імпорту по країнах на основі fin_proj.t4_raw_ukrstat_trade_data"
+    columns:
+      - name: country
+        description: "Назва країни"
+        tests:
+          - not_null
+      - name: export_value_th_dol_usa_runtotal
+        description: "Експорт за період(кумулятивно), тис.дол.США"
+      - name: import_value_th_dol_usa_runtotal
+        description: "Імпорт за період(кумулятивно), тис.дол.США"
+      - name: year
+        tests:
+          - not_null
+      - name: period
+        tests:
+          - not_null
+      - name: date
+        description: "Дата звіту на 01 число місяця"
+        tests:
+          - not_null
+      - name: export_value_month
+        description: "Експорт за місяць, тис.дол.США"
+      - name: import_value_month
+        description: "Імпорт за місяць, тис.дол.США"
+#-------------------------------------------------------------
+  - name: stg_ukrstat_trade_data_product
+    description: "Дані експорту_імпорту по країнах та по продуктах - кумулятивні та помісячні"
+    columns:
+      - name: group_label
+        description: "Група - назва країни по товару"
+        tests:
+          - not_null
+      - name: product_name
+        description: "Назва товару"
+        tests:
+          - not_null
+      - name: product_id
+        description: "Ключ товару з назви product_name"
+        tests:
+          - not_null
+      - name: export_value_th_dol_usa_runtotal
+        description: "Експорт кумулятивний, тис.дол.США"
+      - name: import_value_th_dol_usa_runtotal
+        description: "Імпорт кумулятивний, тис.дол.США"
+      - name: year
+        tests:
+          - not_null
+      - name: period
+        tests:
+          - not_null
+      - name: date
+        description: "Дата звіту на 01 число місяця"
+        tests:
+          - not_null
+      - name: export_value_month
+        description: "Експорт за місяць, тис.дол.США"
+      - name: import_value_month
+        description: "Імпорт за місяць, тис.дол.США"
+#-------------------------------------------------------------
+  - name: stg_exch_rates_median_month
+    description: "Медіанний курс валют (UAH) по місяцях з розрахунком динаміки змін"
+    columns:
+      - name: currency_code
+        description: "Код валюти"
+        tests:
+          - not_null
+          - unique
+
+      - name: month_date
+        description: "Початок місяця (date_trunc), дата формату YYYY-MM-01"
+        tests:
+          - not_null
+
+      - name: period
+        description: "Період у форматі YYYY-MM"
+        tests:
+          - not_null
+
+      - name: median_rate_to_UAH
+        description: "Медіанний курс по місяцю,грн"
+        tests:
+          - not_null
+
+      - name: median_rate_change_ratio
+        description: "Зміна медіанного курсу порівняно з попереднім місяцем"
