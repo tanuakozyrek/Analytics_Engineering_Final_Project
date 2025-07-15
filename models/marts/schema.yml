@@ -1,0 +1,91 @@
+
+version: 2
+
+sources:
+  - name: fin_proj
+    schema: fin_proj
+
+models:
+  - name: dim_ukrstat_trade_product_location
+    description: "Marts таблиця - продукт, країна, група та дата"
+    columns:
+      - name: group_label
+        description: "Назва країни (як у джерелі)"
+        tests:
+          - not_null
+      - name: product_name
+        description: "Назва товару"
+        tests:
+          - not_null
+      - name: subgroup_eng
+        description: "Назва товару eng"
+      - name: product_id
+        description: "Ключ товару з назви product_name"
+        tests:
+          - not_null
+      - name: group_name
+        tests: [not_null]
+      - name: id_group
+        description: "Унікальний ID для групи (створений через row_number)"
+      - name: export_value_th_dol_usa_runtotal
+        description: "Експорт кумулятивний, тис.дол.США"
+      - name: import_value_th_dol_usa_runtotal
+        description: "Імпорт кумулятивний, тис.дол.США"
+      - name: year
+        tests:
+          - not_null
+      - name: period
+        tests:
+          - not_null
+      - name: date
+        description: "Дата звіту на 01 число місяця"
+        tests:
+          - not_null
+      - name: export_value_month
+        description: "Експорт за місяць, тис.дол.США"
+      - name: import_value_month
+        description: "Імпорт за місяць, тис.дол.США"
+      - name: name_en
+        description: "Англійська назва країни"
+        tests:
+          - not_null
+      - name: country_id
+        description: "ID країни з довідника"
+        tests:
+          - not_null
+#--------------------------------------------------------------
+  - name: dim_ukrstat_trade_summary
+    description: "Marts таблиця - країна, дата, медіанний курс за місяць, динаміка курсу"
+    columns:
+      - name: country
+        description: "Назва країни (як у джерелі)"
+        tests:
+          - not_null
+      - name: year
+        tests:
+          - not_null
+      - name: period
+        tests:
+          - not_null
+      - name: date
+        description: "Дата звіту на 01 число місяця"
+        tests:
+          - not_null
+      - name: export_value_month
+        description: "Експорт за місяць, тис.дол.США"
+      - name: import_value_month
+        description: "Імпорт за місяць, тис.дол.США"
+      - name: name_en
+        description: "Англійська назва країни"
+        tests:
+          - not_null
+      - name: country_id
+        description: "ID країни з довідника"
+        tests:
+          - not_null
+      - name: median_rate_to_UAH
+        description: "Медіанний курс по місяцю,грн"
+        tests:
+          - not_null
+      - name: median_rate_change_ratio
+        description: "Зміна медіанного курсу порівняно з попереднім місяцем"
