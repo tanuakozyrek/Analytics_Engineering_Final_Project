@@ -1,0 +1,43 @@
+
+version: 2
+
+seeds:
+  - name: country_dict
+    description: "Офіційний ISO-довідник країн"
+    columns:
+      - name: country_id
+        description: "Цифровий код країни (ISO)"
+        tests:
+          - unique
+          - not_null
+      - name: alpha2
+        description: "Літерний код АЛЬФА-2"
+        tests:
+          - not_null
+      - name: alpha3
+        description: "Літерний код АЛЬФА-3"
+        tests:
+          - not_null
+      - name: name_short
+        description: "Коротка назва країни українською"
+      - name: name_official
+        description: "Офіційна назва країни українською"
+      - name: name_en
+        description: "Назва англійською"
+
+  - name: country_dict_id
+    description: "ID по назві країни (для неспівпадінь символів для однієї країни)"
+    columns:
+      - name: id_cnt
+        description: "Унікальний id запису"
+        tests:
+          - unique
+          - not_null
+      - name: country_id
+        description: "Цифровий код країни (ISO) - не унікальне значення в цьому довіднику"
+        tests:
+          - not_null
+      - name: name_for_stg
+        description: "Коротка назва країни з всіх джерел"
+      - name: name_en
+        description: "Назва англійською"
