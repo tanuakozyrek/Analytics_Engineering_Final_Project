@@ -1,0 +1,218 @@
+﻿id_cnt;country_id;name_for_stg;name_en
+1;376;IЗРАЇЛЬ;Israel
+2;356;IНДIЯ;India
+3;360;IНДОНЕЗIЯ;Indonesia
+4;368;IРАК;Iraq
+5;364;IРАН(IСЛАМСЬКА РЕСПУБЛIКА);Iran, Islamic Republic of
+6;372;IРЛАНДIЯ;Ireland
+7;352;IСЛАНДIЯ;Iceland
+8;724;IСПАНIЯ;Spain
+9;380;IТАЛIЯ;Italy
+10;784;OБ'ЄДНАНI АРАБСЬКI ЕМIРАТИ;United Arab Emirates
+11;40;АВСТРIЯ;Austria
+12;36;АВСТРАЛIЯ;Australia
+13;36;АВСТРАЛІЯ;Australia
+14;31;АЗЕРБАЙДЖАН;Azerbaijan
+15;8;АЛБАНIЯ;Albania
+16;12;АЛЖИР;Algeria
+17;16;АМЕРИКАНСЬКЕ САМОА;American Samoa
+18;24;АНГОЛА;Angola
+19;20;АНДОРРА;Andorra
+20;28;АНТИГУА I БАРБУДА;Antigua and Barbuda
+21;32;АРГЕНТИНА;Argentina
+22;4;АФГАНIСТАН;Afghanistan
+23;112;БIЛОРУСЬ;Belarus
+24;44;БАГАМСЬКІ ОСТРОВИ;Bahamas
+25;50;БАНГЛАДЕШ;Bangladesh
+26;52;БАРБАДОС;Barbados
+27;48;БАХРЕЙН;Bahrain
+28;84;БЕЛIЗ;Belize
+29;56;БЕЛЬГIЯ;Belgium
+30;204;БЕНIН;Benin
+31;60;БЕРМУДСЬКІ ОСТРОВИ;Bermuda
+32;100;БОЛГАРIЯ;Bulgaria
+33;68;БОЛІВІЯ(БАГАТОНАЦІОНАЛЬНА ДЕРЖАВА);Bolivia, Plurinational State of
+34;70;БОСНIЯ I ГЕРЦЕГОВИНА;Bosnia and Herzegovina
+35;72;БОТСВАНА;Botswana
+36;76;БРАЗИЛIЯ;Brazil
+37;86;БРИТАНСЬКА ТЕРИТОРIЯ В IНДIЙСЬКОМУ ОКЕАНI;British Indian Ocean Territory
+38;92;БРИТАНСЬКІ ВIРГIНСЬКI ОСТРОВИ;Virgin Islands, British
+39;96;БРУНЕЙ-ДАРУССАЛАМ;Brunei Darussalam
+40;854;БУРКIНА-ФАСО;Burkina Faso
+41;108;БУРУНДI;Burundi
+42;64;БУТАН;Bhutan
+43;850;ВIРГIНСЬКI ОСТРОВИ (США);Virgin Islands, U.S.
+44;51;ВIРМЕНIЯ;Armenia
+45;548;ВАНУАТУ;Vanuatu
+46;862;ВЕНЕСУЕЛА (БОЛІВАРСЬКА РЕСПУБЛІКА);Venezuela (Bolivarian Republic of)
+47;704;В'ЄТНАМ;Viet Nam
+48;292;ГIБРАЛТАР;Gibraltar
+49;266;ГАБОН;Gabon
+50;332;ГАЇТI;Haiti
+51;270;ГАМБIЯ;Gambia
+52;288;ГАНА;Ghana
+53;328;ГАЯНА;Guyana
+54;324;ГВIНЕЯ;Guinea
+55;624;ГВIНЕЯ-БIСАУ;Guinea-Bissau
+56;312;ГВАДЕЛУПА;Guadeloupe
+57;320;ГВАТЕМАЛА;Guatemala
+58;340;ГОНДУРАС;Honduras
+59;344;ГОНКОНГ, ОСОБЛИВИЙ АДМІНІСТРАТИВНИЙ РАЙОН КИТАЮ;Hong Kong
+60;308;ГРЕНАДА;Grenada
+61;304;ГРЕНЛАНДIЯ;Greenland
+62;300;ГРЕЦIЯ;Greece
+63;268;ГРУЗIЯ;Georgia
+64;208;ДАНIЯ;Denmark
+65;180;ДЕМОКРАТИЧНА РЕСПУБЛІКА КОНГО;Congo, Democratic Republic of the
+66;275;ДЕРЖАВА ПАЛЕСТИНА;State of Palestine
+67;262;ДЖИБУТI;Djibouti
+68;212;ДОМIНIКА;Dominica
+69;214;ДОМIНIКАНСЬКА РЕСПУБЛIКА;Dominican Republic
+70;218;ЕКВАДОР;Ecuador
+71;226;ЕКВАТОРIАЛЬНА ГВIНЕЯ;Equatorial Guinea
+72;232;ЕРИТРЕЯ;Eritrea
+73;233;ЕСТОНIЯ;Estonia
+74;231;ЕФIОПIЯ;Ethiopia
+75;818;ЄГИПЕТ;Egypt
+76;887;ЄМЕН;Yemen
+77;716;ЗIМБАБВЕ;Zimbabwe
+78;894;ЗАМБIЯ;Zambia
+79;732;ЗАХIДНА САХАРА;Western Sahara
+80;400;ЙОРДАНIЯ;Jordan
+81;196;КIПР;Cyprus
+82;132;КАБО-ВЕРДЕ;Cabo Verde
+83;398;КАЗАХСТАН;Kazakhstan
+84;116;КАМБОДЖА;Cambodia
+85;120;КАМЕРУН;Cameroon
+86;124;КАНАДА;Canada
+87;634;КАТАР;Qatar
+88;404;КЕНIЯ;Kenya
+89;417;КИРГИЗСТАН;Kyrgyzstan
+90;156;КИТАЙ;China
+91;170;КОЛУМБIЯ;Colombia
+92;174;КОМОРИ;Comoros
+93;178;КОНГО;Congo
+94;408;КОРЕЙСЬКА НАРОДНО-ДЕМОКРАТИЧНА РЕСПУБЛIКА;Korea, Democratic People?s Republic
+95;188;КОСТА-РИКА;Costa Rica
+96;384;КОТ-Д'IВУАР;Cote  d'Ivoire
+97;192;КУБА;Cuba
+98;414;КУВЕЙТ;Kuwait
+99;531;КЮРАСАО;Cura?ao
+100;430;ЛIБЕРIЯ;Liberia
+101;422;ЛIВАН;Lebanon
+102;438;ЛIХТЕНШТЕЙН;Liechtenstein
+103;418;ЛАОСЬКА НАРОДНО-ДЕМОКРАТИЧНА РЕСПУБЛIКА;Lao People?s Democratic Republic
+104;428;ЛАТВIЯ;Latvia
+105;426;ЛЕСОТО;Lesotho
+106;440;ЛИТВА;Lithuania
+107;434;ЛІВІЯ;Libya
+108;442;ЛЮКСЕМБУРГ;Luxembourg
+109;480;МАВРИКIЙ;Mauritius
+110;478;МАВРИТАНIЯ;Mauritania
+111;450;МАДАГАСКАР;Madagascar
+112;175;МАЙОТТА;Mayotte
+113;446;МАКАО,ОСОБЛИВИЙ АДМІНІСТРАТИВНИЙ РАЙОН КИТАЮ;Macaо
+114;466;МАЛI;Mali
+115;581;МАЛI ВІДДАЛЕНІ ОСТРОВИ США;United States Minor Outlying Islands
+116;454;МАЛАВI;Malawi
+117;458;МАЛАЙЗIЯ;Malaysia
+118;462;МАЛЬДIВИ;Maldives
+119;470;МАЛЬТА;Malta
+120;504;МАРОККО;Morocco
+121;474;МАРТИНIКА;Martinique
+122;584;МАРШАЛЛОВI ОСТРОВИ;Marshall Islands
+123;484;МЕКСИКА;Mexico
+124;508;МОЗАМБIК;Mozambique
+125;492;МОНАКО;Monaco
+126;496;МОНГОЛIЯ;Mongolia
+127;104;М'ЯНМА;Myanmar
+128;562;НIГЕР;Niger
+129;566;НIГЕРIЯ;Nigeria
+130;528;НIДЕРЛАНДИ;Netherlands
+131;558;НIКАРАГУА;Nicaragua
+132;276;НIМЕЧЧИНА;Germany
+133;570;НIУЕ;Niue
+134;516;НАМIБIЯ;Namibia
+135;520;НАУРУ;Nauru
+136;524;НЕПАЛ;Nepаl
+137;554;НОВА ЗЕЛАНДIЯ;New Zealand
+138;540;НОВА КАЛЕДОНIЯ;New Caledonia
+139;578;НОРВЕГІЯ;Norway
+140;512;ОМАН;Oman
+141;654;ОСТРIВ СВЯТОЇ ЄЛЕНИ;Saint Helena
+142;184;ОСТРОВИ КУКА;Cook Islands
+143;710;ПIВДЕННА АФРИКА;South Africa
+144;612;ПIТКЕРН;Pitcairn
+145;586;ПАКИСТАН;Pakistan
+146;585;ПАЛАУ;Palau
+147;591;ПАНАМА;Panama
+148;598;ПАПУА-НОВА ГВIНЕЯ;Papua New Guinea
+149;600;ПАРАГВАЙ;Paraguay
+150;604;ПЕРУ;Peru
+151;728;ПІВДЕННИЙ СУДАН;South Sudan
+152;807;ПІВНІЧНА МАКЕДОНІЯ;Macedonia (The former Yugoslav Republic of)
+153;616;ПОЛЬЩА;Poland
+154;620;ПОРТУГАЛIЯ;Portugal
+155;630;ПУЕРТО-РИКО;Puerto Rico
+156;410;РЕСПУБЛIКА КОРЕЯ;Korea, Republic of
+157;498;РЕСПУБЛІКА МОЛДОВА;Moldova, Republic of
+158;638;РЕЮНЬЙОН;R?union
+159;643;РОСIЙСЬКА ФЕДЕРАЦIЯ;Russian Federation
+160;646;РУАНДА;Rwanda
+161;642;РУМУНIЯ;Romania
+162;222;САЛЬВАДОР;El Salvador
+163;674;САН-МАРИНО;San Marino
+164;682;САУДIВСЬКА АРАВIЯ;Saudi Arabia
+165;336;СВЯТИЙ ПРЕСТОЛ (ДЕРЖАВА-МІСТО ВАТИКАН);Holly See (Vatican City State)
+166;690;СЕЙШЕЛЬСЬКІ ОСТРОВИ;Seychelles
+167;652;СЕН-БАРТЕЛЕМІ;Saint Barth?lemy
+168;686;СЕНЕГАЛ;Senegal
+169;670;СЕНТ-ВIНСЕНТ I ГРЕНАДIНИ;Saint Vincent and the Grenadines
+170;659;СЕНТ-КIТС I НЕВIС;Saint Kitts аnd Nevis
+171;662;СЕНТ-ЛЮСIЯ;Saint Lucia
+172;688;СЕРБІЯ;Serbia
+173;702;СИНГАПУР;Singapore
+174;760;СИРIЙСЬКА АРАБСЬКА РЕСПУБЛIКА;Syrian Arab Republic
+175;703;СЛОВАЧЧИНА;Slovakia
+176;705;СЛОВЕНIЯ;Slovenia
+177;706;СОМАЛI;Somalia
+178;826;СПОЛУЧЕНЕ КОРОЛІВСТВО ВЕЛИКОЇ БРИТАНІЇ ТА ПІВНІЧНОЇ ІРЛАНДІЇ;United Kingdom
+179;729;СУДАН;Sudan
+180;740;СУРИНАМ;Suriname
+181;840;США;United States
+182;694;СЬЄРРА-ЛЕОНЕ;Sierra Leone
+183;762;ТАДЖИКИСТАН;Tajikistan
+184;764;ТАЇЛАНД;Thailand
+185;158;ТАЙВАНЬ, ПРОВIНЦIЯ КИТАЮ;Taiwan, Province of China
+186;834;ТАНЗАНІЯ,  ОБ'ЄДНАНА РЕСПУБЛIКА;Tanzania, United Republic of
+187;768;ТОГО;Togo
+188;772;ТОКЕЛАУ;Tokelau
+189;776;ТОНГА;Tonga
+190;780;ТРІНIДАД I ТОБАГО;Trinidad and Tobago
+191;798;ТУВАЛУ;Tuvalu
+192;788;ТУНIС;Tunisia
+193;792;ТУРЕЧЧИНА;Turkey
+194;795;ТУРКМЕНИСТАН;Turkmenistan
+195;800;УГАНДА;Uganda
+196;348;УГОРЩИНА;Hungary
+197;860;УЗБЕКИСТАН;Uzbekistan
+198;858;УРУГВАЙ;Uruguay
+199;242;ФIДЖI;Fiji
+200;608;ФIЛIППIНИ;Philippines
+201;246;ФIНЛЯНДIЯ;Finland
+202;234;ФАРЕРСЬКI ОСТРОВИ;Faroe Islands
+203;238;ФОЛКЛЕНДСЬКI (МАЛЬВIНСЬКI) ОСТРОВИ;Falkland Islands (Malvinas)
+204;250;ФРАНЦIЯ;France
+205;254;ФРАНЦУЗЬКА ГВIАНА;French Guiana
+206;258;ФРАНЦУЗЬКА ПОЛIНЕЗIЯ;French Polynesia
+207;191;ХОРВАТIЯ;Croatia
+208;140;ЦЕНТРАЛЬНОАФРИКАНСЬКА РЕСПУБЛIКА;Central African Republic
+209;148;ЧАД;Chad
+210;203;ЧЕХІЯ;Czech Republic
+211;152;ЧИЛI;Chile
+212;499;ЧОРНОГОРІЯ;Montenegro
+213;756;ШВЕЙЦАРIЯ;Switzerland
+214;752;ШВЕЦIЯ;Sweden
+215;144;ШРИ-ЛАНКА;Sri Lanka
+216;388;ЯМАЙКА;Jamaica
+217;392;ЯПОНIЯ;Japan
