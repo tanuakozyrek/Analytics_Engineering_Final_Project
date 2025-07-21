@@ -14,7 +14,7 @@ from io import BytesIO
 from pandas.tseries.offsets import MonthBegin
 
 # 1. Підключення до БД
-db_url = "..."
+db_url = "postgresql://tanykozyr2025:foS_*529gpx@postgresql-tanykozyr2025.alwaysdata.net:5432/tanykozyr2025_postsql"
 engine = create_engine(db_url)
 #------------------------------------------------------------------------------------------------
 # 2. Декоратор логування
@@ -109,18 +109,36 @@ def save_trade_data():
         file_response = requests.get(url)
         filename = os.path.basename(url)
         try:
+            # читаємо без заголовків
             if filename.endswith(".xls"):
-                df = pd.read_excel(BytesIO(file_response.content), engine="xlrd")
+                raw_df = pd.read_excel(BytesIO(file_response.content), engine="xlrd", header=None)
             else:
-                df = pd.read_excel(BytesIO(file_response.content), engine="openpyxl")
+                raw_df = pd.read_excel(BytesIO(file_response.content), engine="openpyxl", header=None)
 
+            # шукаємо перший рядок, де є " ВСЬОГО:"
+            start_idx = raw_df[raw_df.apply(lambda row: row.astype(str).str.contains(" ВСЬОГО:").any(), axis=1)].index.min()
+            if pd.isna(start_idx):
+                raise ValueError(f"Не знайдено рядка ' ВСЬОГО:' у файлі {filename}")
+
+            # вирізаємо дані
+            df = raw_df.iloc[start_idx:].reset_index(drop=True)
+            df.columns = [
+                "name_complex",
+                "export_value_th_dol_usa",
+                "export_percent_to_period_of_prev_year",
+                "export_percent_of_total_volume",
+                "import_value_th_dol_usa",
+                "import_percent_to_period_of_prev_year",
+                "import_percent_of_total_volume"
+            ]
+
+            # метадані
             df["source_file"] = filename
             df["period"] = extract_period(filename)
             df["year"] = df["period"].str[:4]
-            #df["date"] = pd.to_datetime(df["period"]) + MonthBegin(1) #наступний місяць
-            df["date"] = pd.to_datetime(df["period"] + "-01") #поточний місяць
+            df["date"] = pd.to_datetime(df["period"] + "-01")
 
-            # логіка для group_label
+            # групування
             group_labels = []
             current_label = None
             for val in df.iloc[:, 0]:
@@ -142,37 +160,22 @@ def save_trade_data():
 
     combined_df = pd.concat(dataframes, ignore_index=True)
 
-    new_column_names = [
-        "name_complex",
-        "export_value_th_dol_usa",
-        "export_percent_to_period_of_prev_year",
-        "export_percent_of_total_volume",
-        "import_value_th_dol_usa",
-        "import_percent_to_period_of_prev_year",
-        "import_percent_of_total_volume"
-    ]
-    columns = combined_df.columns.tolist()
-    columns[:7] = new_column_names
-    combined_df.columns = columns
-
+    # додаткові поля
     combined_df["product_name"] = combined_df["name_complex"].apply(
         lambda x: x if isinstance(x, str) and x.strip()[0].isdigit() else None
     )
-    # Перетворюємо колонку на числову, нечислові значення стануть NaN
     combined_df["export_value_th_dol_usa"] = pd.to_numeric(
-    combined_df["export_value_th_dol_usa"], errors="coerce"
+        combined_df["export_value_th_dol_usa"], errors="coerce"
     )
-
-    # Видаляємо рядки, де значення NaN (тобто були текстом або порожні)
     combined_df = combined_df[combined_df["export_value_th_dol_usa"].notna()].copy()
 
-    # Видаляємо записи поточного року
+    # очищення таблиці в БД
     with engine.begin() as connection:
         connection.execute(text(
             f"DELETE FROM fin_proj.t4_raw_ukrstat_trade_data WHERE year = '{current_year}'"
         ))
 
-    # Завантаження у PostgreSQL
+    # запис у PostgreSQL
     combined_df.to_sql("t4_raw_ukrstat_trade_data", schema="fin_proj", con=engine, if_exists="append", index=False)
     return combined_df
 #------------------------------------------------------------------------------------------------
